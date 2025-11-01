@@ -57,4 +57,13 @@ Under recommendations online I am looking for error codes like '1500 profile can
 <img src="https://i.postimg.cc/7PNNkp6T/7-finding-error-codes-in-Winlogon.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-It's actually very enjoyable/satisfying to try and turn theory into practical experience in homelabs! From this project I have tried to learn how to troubleshoot problem logins and followed steps to resolve the issue by removing programs on startup through TaskManager, migrating the corrupted account to a fresh one and utilised event viewer to try and view any error codes relating to the profile problems.
+Just to understand further, I wanted to see the auditing policies, so I researched how to view auditing logs. I ran 'secpol.msc' which opened Local Security policy. In security settings I found Auditing policy under local policies.
+I then double clicked 'Audit Logon Events' and 'Audit Account Logon Events' to which I ticked success/failure to show these events in Event Viewer like discussed previously. I then restarted to lets changes take effect. <br/>
+<img src="https://i.postimg.cc/4ybHT7Tf/8-Enabling-logon-auditing.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Back in Event Viewer now, I filtered the current logs to show security logs like 4624 and 4625. I also set the time for last 12 hrs to further narrow down results. So I have used Event Viewer here to see any problems that could match what the user is describing in troubleshooting.   <br/>
+<img src="https://i.postimg.cc/prY5thtX/9-Checking-Security-Logs-Filtering-searches.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+It's actually very enjoyable/satisfying to try and turn theory into practical experience in homelabs... From this project I have tried to learn how to troubleshoot problem logins and followed steps to resolve the issue by removing programs on startup through TaskManager, migrating the corrupted account to a fresh one and utilised Event Viewer to try and see any error codes relating to the profile problems for reference.
