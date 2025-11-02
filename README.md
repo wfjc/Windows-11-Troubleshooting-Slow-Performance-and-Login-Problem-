@@ -67,3 +67,4 @@ Back in Event Viewer now, I filtered the current logs to show security logs like
 <br />
 <br />
 It's actually very enjoyable/satisfying to try and turn theory into practical experience in homelabs... From this project I have tried to learn how to troubleshoot problem logins and followed steps to resolve the issue by removing programs on startup through TaskManager, migrating the corrupted account to a fresh one and utilised Event Viewer to try and see any error codes relating to the profile problems for reference.
+I used AI and online resources to help me understand, but I tested the results myself in a lab to grasp these concepts better. My goal was to show real troubleshooting practice, not just memorisation.
